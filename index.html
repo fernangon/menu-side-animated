@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Hamburger</title>
+    <link rel="stylesheet" href="micss.css">
+
+</head>
+
+
+<body>
+    
+    <header>
+
+        <!-- Button -->
+        <div class="button">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+
+        <!-- Menu  -->
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="">Television</a></li>
+                <li><a href="">Internet</a></li>
+                <li><a href="">Radio</a></li>
+                <li><a href="">Email</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- Text -->
+    <section class="text">
+        <h1>Web Medias</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit iaculis feugiat pulvinar ut, luctus etiam conubia lobortis pretium senectus 
+            molestie semper lacinia pharetra. Nascetur conubia elementum mauris ante risus rutrum metus porta iaculis, sagittis sociis massa 
+            nibh suscipit eget imperdiet turpis enim, curae fringilla gravida nulla inceptos suspendisse eros eu. 
+            Laoreet enim facilisi sapien semper cum nunc integer praesent, nisl quisque augue dapibus quis nibh gravida ultrices iaculis, 
+            faucibus elementum rutrum nisi aliquam sagittis porttitor.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit iaculis feugiat pulvinar ut, luctus etiam conubia lobortis pretium senectus 
+            molestie semper lacinia pharetra. Nascetur conubia elementum mauris ante risus rutrum metus porta iaculis, sagittis sociis massa 
+            nibh suscipit eget imperdiet turpis enim, curae fringilla gravida nulla inceptos suspendisse eros eu. 
+            Laoreet enim facilisi sapien semper cum nunc integer praesent, nisl quisque augue dapibus quis nibh gravida ultrices iaculis, 
+            faucibus elementum rutrum nisi aliquam sagittis porttitor.
+        </p>
+    </section>
+
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" 
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+            crossorigin="anonymous">
+    </script>
+
+
+    <script>
+        /*  A page can't be manipulated safely until the document is "ready." jQuery detects this state of readiness for you. 
+            https://learn.jquery.com/using-jquery-core/document-ready/ 
+        */
+        $(document).ready(function() {
+
+            
+            // https://learn.jquery.com/events/event-basics/
+            $(".button").on("click", function() {
+
+                
+                $(".button .line:nth-of-type(1)").toggleClass("line-1");
+                $(".button .line:nth-of-type(2)").toggleClass("line-2");
+                $(".button .line:nth-of-type(3)").toggleClass("line-3");
+
+                
+                $(".mobile-menu").toggleClass("open");
+
+            });            
+
+        });
+    </script>
+
+
+
+</body>
+ 
+
+</html>
+
+
